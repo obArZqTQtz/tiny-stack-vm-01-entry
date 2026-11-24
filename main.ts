@@ -4,11 +4,12 @@ import{join as J}from'path';
 const G=' 1a$&*+/pppppppp)))))))%)))%)))p)))ppppppppppppp@DD@ ppppppppppp%(pppppppppppppp$$!$';
 const F=[,,,,,,,,,,,,,,,,(e,b)=>e+b|0,(e,b)=>e-b|0,Math.imul,(e,b)=>(e/b)|0,(e,b)=>b==-1?0:e%b|0,(e,b)=>(e>>>0)/(b>>>0)|0,(e,b)=>(e>>>0)%(b>>>0)|0,,(e,b)=>e&b,(e,b)=>e|b,(e,b)=>e^b,,(e,b)=>e<<(b&31),(e,b)=>e>>(b&31),(e,b)=>e>>>(b&31)|0,,(e,b)=>e===b?1:0,(e,b)=>e<b?1:0,(e,b)=>(e>>>0)<(b>>>0)?1:0];
 function r(p,q){
+const L=1e6;
 let s=[],c=[],m=new Int32Array(256),o='',i=0,pc=0,t=0;
 let d=e=>({out:Buffer.from(o,'latin1'),code:e});
 // main loop: each iteration fetches one opcode, decodes it via table G, executes it; traps return through d(code).
 for(;;){
-if(t===1e6)return d(10);
+if(t===L)return d(10);
 if(pc<0||pc>=p.length)return d(9);
 let a=p[pc],v=a>83?80:G.charCodeAt(a)-32;
 if(v>79)return d(5);
