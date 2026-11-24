@@ -1,4 +1,4 @@
-// tiny stack VM (golfed 2.4KB, round 3): implements make.fun's tiny stack ISA (ISA.md) exactly as the reference vm.mjs, including its trap codes and exit semantics; reads /input/<id>/program.bin + input.bin, writes /output/<id>/stdout.bin + exit.txt. Practice: 40/40.
+// tiny stack VM (golfed 2.4KB, round 3, 40/40 practice): implements make.fun's tiny stack ISA (ISA.md) exactly as the reference vm.mjs, including its trap codes and exit semantics; reads /input/<id>/program.bin + input.bin, writes /output/<id>/stdout.bin + exit.txt. Practice: 40/40.
 import{mkdirSync as M,readdirSync as D,readFileSync as R,writeFileSync as W}from'fs';
 import{join as J}from'path';
 const G=' 1a$&*+/pppppppp)))))))%)))%)))p)))ppppppppppppp@DD@ ppppppppppp%(pppppppppppppp$$!$';
