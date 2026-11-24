@@ -6,6 +6,7 @@ const F=[,,,,,,,,,,,,,,,,(e,b)=>e+b|0,(e,b)=>e-b|0,Math.imul,(e,b)=>(e/b)|0,(e,b
 function r(p,q){
 let s=[],c=[],m=new Int32Array(256),o='',i=0,pc=0,t=0;
 let d=e=>({out:Buffer.from(o,'latin1'),code:e});
+// main loop: each iteration fetches one opcode, decodes it via table G, executes it; traps return through d(code).
 for(;;){
 if(t===1e6)return d(10);
 if(pc<0||pc>=p.length)return d(9);
